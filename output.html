@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Lirik</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .judul {
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .penulis {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .lirik {
+            line-height: 1.6;
+            color: #333;
+            white-space: pre-line;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="judul" id="judul"></div>
+    <div class="penulis" id="penulis"></div>
+    <div class="lirik" id="lirik"></div>
+
+    <a href="input.html">← Kembali ke Input</a>
+</div>
+
+<script>
+    document.getElementById("judul").textContent = localStorage.getItem("judul");
+    document.getElementById("penulis").textContent =
+        "Penulis: " + localStorage.getItem("penulis");
+    document.getElementById("lirik").textContent =
+        localStorage.getItem("lirik");
+</script>
+
+</body>
+</html>
